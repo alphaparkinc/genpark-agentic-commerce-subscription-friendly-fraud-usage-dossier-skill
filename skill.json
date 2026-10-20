@@ -1,0 +1,76 @@
+{
+  "name": "genpark-agentic-commerce-subscription-friendly-fraud-usage-dossier-skill",
+  "version": "1.0.0",
+  "title": "Subscription Friendly Fraud Usage Log & Dossier Compiler Skill",
+  "description": "SaaS & digital streaming cancellation dispute arbiter, compiling server access logs, active feature interaction timestamps, and Terms of Service consent proofs to refute unrecognized charge claims. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "agentic-commerce",
+  "topics": [
+    "subscription-disputes",
+    "saas-chargebacks",
+    "friendly-fraud",
+    "usage-logs",
+    "agentic-commerce",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "compile_subscription_usage_evidence",
+      "description": "Compile active user session logs, API call volumes, and account login IP timestamps during the disputed billing cycle to disprove unauthorized use.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "account_id": {
+            "type": "string"
+          },
+          "subscription_plan": {
+            "type": "string"
+          },
+          "disputed_cycle_amount_usd": {
+            "type": "number"
+          },
+          "active_session_count_in_cycle": {
+            "type": "integer"
+          },
+          "last_login_timestamp": {
+            "type": "string"
+          },
+          "tos_accepted_timestamp": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "account_id",
+          "subscription_plan",
+          "disputed_cycle_amount_usd",
+          "active_session_count_in_cycle"
+        ]
+      }
+    },
+    {
+      "name": "generate_saas_chargeback_rebuttal_letter",
+      "description": "Synthesize a formal legal merchant rebuttal letter for Visa Reason Code 10.4 / Mastercard 4853 demonstrating active platform consumption.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "customer_name": {
+            "type": "string"
+          },
+          "chargeback_case_id": {
+            "type": "string"
+          },
+          "evidence_summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "customer_name",
+          "chargeback_case_id",
+          "evidence_summary"
+        ]
+      }
+    }
+  ]
+}
